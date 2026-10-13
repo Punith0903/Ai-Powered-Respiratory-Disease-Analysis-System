@@ -1,0 +1,15 @@
+# RESPIRATORY DISEASE PREDICTION SYSTEM
+# Complete Dependencies - Ready to Install
+
+# Core Web Framework
+Flask==2.3.3
+Werkzeug==2.3.7
+
+# Graph Generation
+plotly==5.17.0
+
+# Development Tools (Optional)
+# If you want advanced audio processing:
+# librosa==0.10.1
+# numpy==1.24.3
+# scikit-learn==1.3.0

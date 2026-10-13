@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Respiratory AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 text-center mb-5">
+        <h1 class="display-4 text-primary">
+            <i class="fas fa-lungs me-3"></i>Welcome to Respiratory AI
+        </h1>
+        <p class="lead text-muted">Advanced AI-powered respiratory disease analysis system</p>
+        <p class="h5">Hello, <span class="text-success">{{ username }}</span>! 👋</p>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+                <div class="mb-3">
+                    <i class="fas fa-microphone fa-4x text-primary"></i>
+                </div>
+                <h4 class="card-title">Analyze Audio</h4>
+                <p class="card-text text-muted">Upload respiratory audio files for instant AI-powered analysis with interactive graphs</p>
+                <a href="{{ url_for('upload') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-microphone me-2"></i>Start Analysis
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+                <div class="mb-3">
+                    <i class="fas fa-chart-line fa-4x text-success"></i>
+                </div>
+                <h4 class="card-title">View Statistics</h4>
+                <p class="card-text text-muted">Check your analysis history and comprehensive system statistics with visual charts</p>
+                <a href="{{ url_for('stats') }}" class="btn btn-success btn-lg">
+                    <i class="fas fa-chart-bar me-2"></i>View Stats
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-gradient text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h5 class="mb-0"><i class="fas fa-star me-2"></i>System Features</h5>
+            </div>
+            <div class="card-body p-4">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-brain fa-3x text-primary"></i>
+                        </div>
+                        <h6>AI-Powered Analysis</h6>
+                        <p class="small text-muted">Advanced machine learning algorithms for accurate respiratory sound analysis with confidence scoring</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-stethoscope fa-3x text-danger"></i>
+                        </div>
+                        <h6>Medical Information</h6>
+                        <p class="small text-muted">Comprehensive medical explanations, symptoms, and recommendations for each condition</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-chart-pie fa-3x text-warning"></i>
+                        </div>
+                        <h6>Interactive Graphs</h6>
+                        <p class="small text-muted">Beautiful Plotly charts showing probability distributions and analysis results</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-shield-alt fa-3x text-info"></i>
+                        </div>
+                        <h6>Secure & Private</h6>
+                        <p class="small text-muted">Your data is processed securely with user authentication and temporary file storage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-light">
+                <h5 class="mb-0"><i class="fas fa-clock me-2"></i>Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <a href="{{ url_for('upload') }}" class="btn btn-outline-primary w-100">
+                            <i class="fas fa-microphone me-2"></i>New Analysis
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{{ url_for('history') }}" class="btn btn-outline-secondary w-100">
+                            <i class="fas fa-history me-2"></i>View History
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{{ url_for('stats') }}" class="btn btn-outline-info w-100">
+                            <i class="fas fa-chart-bar me-2"></i>Statistics
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-warning border-0 shadow-sm">
+            <div class="row align-items-center">
+                <div class="col-md-1 text-center">
+                    <i class="fas fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="col-md-11">
+                    <h6 class="alert-heading mb-2">Important Notice</h6>
+                    <p class="mb-0">This system is for <strong>educational purposes only</strong> and should not be used for medical diagnosis. Always consult qualified healthcare professionals for medical concerns and treatment decisions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

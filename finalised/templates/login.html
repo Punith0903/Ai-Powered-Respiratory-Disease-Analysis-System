@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Respiratory AI{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card border-0 shadow">
+            <div class="card-header text-center py-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h3 class="text-white mb-0">
+                    <i class="fas fa-sign-in-alt me-2"></i>Welcome Back
+                </h3>
+                <p class="text-white-50 mt-2 mb-0">Sign in to your account</p>
+            </div>
+            <div class="card-body p-5">
+                <form method="POST">
+                    <div class="mb-4">
+                        <label for="username" class="form-label fw-bold">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control form-control-lg" id="username" name="username" required placeholder="Enter your username">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label fw-bold">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" class="form-control form-control-lg" id="password" name="password" required placeholder="Enter your password">
+                        </div>
+                    </div>
+
+                    <div class="d-grid mb-4">
+                        <button type="submit" class="btn btn-lg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white;">
+                            <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                        </button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <div class="text-center">
+                    <p class="mb-0">Don't have an account?</p>
+                    <a href="{{ url_for('register') }}" class="btn btn-outline-primary mt-2">
+                        <i class="fas fa-user-plus me-2"></i>Create Account
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body text-center">
+                <h6><i class="fas fa-info-circle me-2 text-info"></i>Demo System</h6>
+                <p class="small text-muted mb-0">Create any username and password to get started. This is a demonstration system for educational purposes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
